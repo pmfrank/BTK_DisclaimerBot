@@ -6,7 +6,6 @@ from discord.ext import commands
 # Set up environment variables and get the Bots oauth2 token
 project_folder = os.path.expanduser('~/disclaimer_bot/BTK_DisclaimerBot')
 load_dotenv(os.path.join(project_folder, '.env'))
-load_dotenv()
 TOKEN = os.getenv("TOKEN")
 
 # Create an instance of the bot
