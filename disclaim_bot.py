@@ -14,7 +14,10 @@ bot = commands.Bot(command_prefix='!',case_insensitive=True, description='A simp
 # Set an on ready event
 @bot.event
 async def on_ready():
-    print('Bot is ready')
+    print(f'Logged on as {bot.user.name}')
+    print('Joined servers')
+    for guild in bot.guilds:
+        print(guild.name)
 
 # Set commands for bot
 
