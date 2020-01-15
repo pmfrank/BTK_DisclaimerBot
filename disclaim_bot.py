@@ -4,8 +4,9 @@ import discord
 from discord.ext import commands
 
 # Set up environment variables and get the Bots oauth2 token
-project_folder = os.path.expanduser('~/disclaimer_bot')
+project_folder = os.path.expanduser('~/disclaimer_bot/BTK_DisclaimerBot')
 load_dotenv(os.path.join(project_folder, '.env'))
+load_dotenv()
 TOKEN = os.getenv("TOKEN")
 
 # Create an instance of the bot
@@ -14,10 +15,10 @@ bot = commands.Bot(command_prefix='!',case_insensitive=True, description='A simp
 # Set an on ready event
 @bot.event
 async def on_ready():
-    print(f'Logged on as {bot.user.name}')
+    print("Logged on as {}".format(bot.user.name))
     print('Joined servers')
     for guild in bot.guilds:
-        print(guild.name)
+       print(guild.name)
 
 # Set commands for bot
 
